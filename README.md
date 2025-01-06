@@ -1,5 +1,7 @@
 # Futuristic CRUD Application
 
+![Screenshot 2025-01-06 150316](https://github.com/user-attachments/assets/56bd0659-1069-4064-b37d-ef131d7d3cea)
+
 ## Overview
 
 This is a PHP-based CRUD (Create, Read, Update, Delete) application that allows users to manage records in a MySQL database. The application features user authentication, role-based access control, and functionality for importing and exporting user data.
