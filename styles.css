@@ -1,0 +1,129 @@
+/* General Body Styles */
+body {
+    background-color: #121212; /* Dark background for a futuristic feel */
+    color: #e0e0e0; /* Light text color for contrast */
+    font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #1f1f1f; /* Darker navbar background */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.navbar-brand {
+    color: #00bcd4; /* Bright cyan text for the brand */
+    font-weight: bold; /* Bold brand text */
+}
+
+.nav-link {
+    color: #e0e0e0; /* Light text for links */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.nav-link:hover {
+    color: #00bcd4; /* Change color to bright cyan on hover */
+}
+
+/* Container Styles */
+.container {
+    margin-top: 20px; /* Space above the container */
+}
+
+/* Card Styles */
+.card {
+    background-color: #1e1e1e; /* Dark card background */
+    border: 1px solid #00bcd4; /* Bright cyan border for cards */
+    border-radius: 10px; /* Rounded corners for cards */
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.5); /* Bright cyan shadow */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 0 30px rgba(0, 188, 212, 0.7); /* Deeper bright cyan shadow on hover */
+}
+
+.card-title {
+    font-size: 1.5rem; /* Larger font size for card titles */
+    color: #00bcd4; /* Bright cyan text color for titles */
+}
+
+.card-text {
+    color: #cccccc; /* Light gray text color for card text */
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.btn-success {
+    background-color: #4caf50; /* Green background for success button */
+}
+
+.btn-success:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+.btn-warning {
+    background-color: #ff9800; /* Orange background for warning button */
+}
+
+.btn-warning:hover {
+    background-color: #f57c00; /* Darker orange on hover */
+}
+
+.btn-danger {
+    background-color: #f44336; /* Red background for danger button */
+}
+
+.btn-danger:hover {
+    background-color: #c62828; /* Darker red on hover */
+}
+
+.btn-primary {
+    background-color: #2196f3; /* Blue background for primary button */
+}
+
+.btn-primary:hover {
+    background-color: #1976d2; /* Darker blue on hover */
+}
+
+/* Pagination Styles */
+.pagination {
+    justify-content: center; /* Center pagination */
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #00bcd4; /* Active page link color */
+    border-color: #00bcd4; /* Active page link border color */
+}
+
+.pagination .page-link {
+    color: #00bcd4; /* Color for pagination links */
+}
+
+/* Alert Styles */
+.alert {
+    margin-top: 20px; /* Space above alerts */
+    background-color: rgba(0, 188, 212, 0.1); /* Light cyan background for alerts */
+    border-color: #00bcd4; /* Bright cyan border for alerts */
+}
+
+/* Input Group Styles */
+.input-group {
+    margin-bottom: 20px; /* Space below input groups */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px; /* Padding for smaller screens */
+    }
+
+    .card {
+        margin-bottom: 15px; /* Less margin for cards on smaller screens */
+    }
+}
