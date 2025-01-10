@@ -29,12 +29,12 @@ $sort = isset($_GET['sort']) ? $_GET['sort'] : 'id';
 $order = isset($_GET['order']) ? $_GET['order'] : 'ASC';
 
 // Fetch total number of records with search
-$total_result = mysqli_query($conn, "SELECT COUNT(*) AS total FROM `crud` WHERE `first_name` LIKE '%$search%' OR `last_name` LIKE '%$search%' OR `email` LIKE '%$search%'");
+$total_result = mysqli_query($conn, "SELECT COUNT(*) AS total FROM `crud` WHERE `first_name` LIKE '%$search%' OR `last_name` LIKE '%$search%' OR `email` LIKE '%$search%' OR `gender` LIKE '%$search%' OR `age` LIKE '%$search%' OR `city` LIKE '%$search%' OR `phone` LIKE '%$search%'");
 $total_row = mysqli_fetch_assoc($total_result);
 $total_pages = ceil($total_row['total'] / $limit);
 
 // Fetch user data with pagination, search, and sorting
-$sql = "SELECT * FROM `crud` WHERE `first_name` LIKE '%$search%' OR `last_name` LIKE '%$search%' OR `email` LIKE '%$search%' ORDER BY $sort $order LIMIT $limit OFFSET $offset";
+$sql = "SELECT * FROM `crud` WHERE `first_name` LIKE '%$search%' OR `last_name` LIKE '%$search%' OR `email` LIKE '%$search%' OR `gender` LIKE '%$search%' OR `age` LIKE '%$search%' OR `city` LIKE '%$search%' OR `phone` LIKE '%$search%' ORDER BY $sort $order LIMIT $limit OFFSET $offset";
 $result = mysqli_query($conn, $sql);
 ?>
 
@@ -147,7 +147,7 @@ $result = mysqli_query($conn, $sql);
         <!-- Search Form -->
         <form method="GET" class="mb-3">
             <div class="input-group">
-                <input type="text" name="search" value="<?php echo htmlspecialchars($search); ?>" placeholder="Search by name or email" class="form-control">
+                <input type="text" name="search" value="<?php echo htmlspecialchars($search); ?>" placeholder="Search" class="form-control">
                 <button type="submit" class="btn btn-primary">Search</button>
             </div>
         </form>
