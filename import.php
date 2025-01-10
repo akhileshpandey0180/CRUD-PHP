@@ -16,13 +16,13 @@ if (isset($_POST["import"])) {
         fgetcsv($file_handle, 1000, ",");
         
         while (($row = fgetcsv($file_handle, 1000, ",")) !== FALSE) {
-            $first_name = $row[0];
-            $last_name = $row[1];
-            $email = $row[2];
-            $gender = $row[3];
-            $age = isset($row[4]) ? $row[4] : null; // Optional field
-            $city = isset($row[5]) ? $row[5] : null; // Optional field
-            $phone = isset($row[6]) ? $row[6] : null; // Optional field
+            $first_name = $row[1];
+            $last_name = $row[2];
+            $email = $row[3];
+            $gender = $row[4];
+            $age = isset($row[5]) ? $row[5] : null; // Optional field
+            $city = isset($row[6]) ? $row[6] : null; // Optional field
+            $phone = isset($row[7]) ? $row[7] : null; // Optional field
            
             // Prepared statement to prevent SQL injection
             $stmt = $conn->prepare("INSERT INTO `crud`(`first_name`, `last_name`, `email`, `gender`, `age`, `city`, `phone`) VALUES (?, ?, ?, ?, ?, ?, ?)");
