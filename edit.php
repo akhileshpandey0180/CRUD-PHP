@@ -25,7 +25,7 @@ if (isset($_POST["submit"])) {
 
     // Prepared statement to prevent SQL injection
     $stmt = $conn->prepare("UPDATE `crud` SET `first_name`=?, `last_name`=?, `email`=?, `gender`=?, `age`=?, `city`=?, `phone`=? WHERE id=?");
-    $stmt->bind_param("ssssiisi", $first_name, $last_name, $email, $gender, $age, $city, $phone, $id);
+    $stmt->bind_param("ssssisii", $first_name, $last_name, $email, $gender, $age, $city, $phone, $id);
 
     if ($stmt->execute()) {
         // Log the action
