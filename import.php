@@ -26,7 +26,7 @@ if (isset($_POST["import"])) {
            
             // Prepared statement to prevent SQL injection
             $stmt = $conn->prepare("INSERT INTO `crud`(`first_name`, `last_name`, `email`, `gender`, `age`, `city`, `phone`) VALUES (?, ?, ?, ?, ?, ?, ?)");
-            $stmt->bind_param("ssssiiss", $first_name, $last_name, $email, $gender, $age, $city, $phone);
+            $stmt->bind_param("ssssisi", $first_name, $last_name, $email, $gender, $age, $city, $phone);
             $stmt->execute();
         }
         fclose($file_handle);
