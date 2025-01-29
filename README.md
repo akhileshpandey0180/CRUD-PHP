@@ -6,6 +6,8 @@
 
 This is a PHP-based CRUD (Create, Read, Update, Delete) application that allows users to manage records in a MySQL database. The application features user authentication, role-based access control, and functionality for importing and exporting user data.
 
+## Watch the Demo Video
+[Watch the video](https://www.youtube.com/watch?v=AqrIpF8T-lo&t=1s)
 ## Features
 
 - **User Authentication:** Secure login and registration system with password hashing.
